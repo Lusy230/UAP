@@ -1,0 +1,22 @@
+[project]
+name = "UAP"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Lusy230", email = "lusyrohmadhoni03@gmail.com"},
+]
+dependencies = ["Streamlit>=1.41.1", "Tensorflow>=2.18.0", "Joblib>=1.4.2", "Scikit-learn>=1.6.0"]
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts]
+start = "streamlit run ./src/uap/app.py"
